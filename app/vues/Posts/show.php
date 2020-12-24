@@ -22,6 +22,7 @@ use \Noyau\Classes\Template;
    <h1>Auteur n°<?php echo $auteur->getId(); ?></h1>
    <h2><?php echo $auteur->getPseudo(); ?></h2>
    <hr>
+
 <?php Template::stopZone('content');?>
    
    

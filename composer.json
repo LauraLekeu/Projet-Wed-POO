@@ -1,0 +1,17 @@
+{
+    "name": "laura-ieps/projet-wed-poo",
+    "authors": [
+        {
+            "name": "laura",
+            "email": "lauralekeu13@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\Controleurs\\": "app/controleurs",
+            "App\\Modeles\\": "app/modeles",
+            "Noyau\\Classes\\": "noyau/classes"
+        }
+    }
+}

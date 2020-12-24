@@ -41,8 +41,6 @@ abstract class GestionnaireGenerique {
       $rs->bindValue(':offset', $data['offset'], \PDO::PARAM_INT);
       $rs->execute();
       $tab = $rs->fetchAll(\PDO::FETCH_ASSOC);
-   
-      
       return $this->fromAssocToObject($tab, $this->_class);
     }
 
@@ -50,7 +48,7 @@ abstract class GestionnaireGenerique {
 
    // AUTRES METHODES 
 
-   protected function fromAssocToObject(array $rs, string $class) { // La fonction va convertir un tableau rs en objet de type 'Post' 
+   protected function fromAssocToObject(array $rs, string $class) { // La fonction va convertir un tableau rs en objet de type 'Class' 
       $tab = [];
       foreach($rs as $r):
          $tab[] = new $this->_class($r);
