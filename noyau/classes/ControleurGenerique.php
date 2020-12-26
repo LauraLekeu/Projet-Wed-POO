@@ -43,8 +43,9 @@ abstract class ControleurGenerique {
       $r = $this->_table ;
 
       $$r = $this->_gestionnaire->findAll($data); 
-   
+
       include '../app/vues/' . $this->_table . '/' . $data['view'] . '.php';
+      
       }
 
    }

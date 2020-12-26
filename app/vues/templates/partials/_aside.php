@@ -23,15 +23,11 @@
   </aside>
 
   <aside class="single_sidebar_widget post_category_widget">
-    <h4 class="widget_title">Category</h4>
-    <ul class="list cat-list">
-      <li>
-        <a href="#" class="d-flex">
-          <p>Restaurant food</p>
-          <p>(37)</p>
-        </a>
-      </li>
-    </ul>
+    <?php  
+        // Liste des catégories
+        $ctrl = new \App\Controleurs\CategoriesControleur();
+        $ctrl->indexAction();  
+      ?>
   </aside>
 
   <aside class="single_sidebar_widget tag_cloud_widget">

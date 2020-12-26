@@ -1,8 +1,8 @@
 <?php
 /*
 
-      ./app/vues/auterus/index.php
-      Liste des auteurs
+      ./app/vues/posts/index.php
+      Liste des posts
 
  */
 ?>
