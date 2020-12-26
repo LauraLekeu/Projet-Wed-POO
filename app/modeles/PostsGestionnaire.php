@@ -16,6 +16,7 @@
    }
 
    public function findAll(array $data) {
+
     $sql = "SELECT *, 
                    p.id, 
                    p.created_at,
@@ -32,6 +33,24 @@
     $tab = $rs->fetchAll(\PDO::FETCH_ASSOC);
     return $this->fromAssocToObject($tab, $this->_class);
   }
+
+
+    public function findOneById(int $id) {
+      $sql = "SELECT *, 
+                      p.id, 
+                      p.created_at,
+                      c.name AS categorie
+              FROM posts p
+              JOIN categories c ON p.categorie_id = c.id
+              JOIN authors a ON p.author_id = a.id
+              WHERE p.id = :id;";
+      $rs = App::getConnexion()->prepare($sql);
+      $rs->bindValue(':id', $id, \PDO::PARAM_INT);
+      $rs->execute();
+      return new $this->_class($rs->fetch(\PDO::FETCH_ASSOC));
+    }
+
+
 
 
   }

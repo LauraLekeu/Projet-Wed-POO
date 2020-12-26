@@ -26,6 +26,15 @@ ACTION : INDEXACTION
 
 /* ROUTE STANDARDS  -------------------------------------------------------------------------------------------- */ 
 /*
+ROUTE DU DETAIL D'UN POST
+PATTERN : /?more-posts
+CTRL : PostsControleur
+ACTION : INDEXACTION
+*/ elseif(isset($_GET['postId'])):
+      $ctrl = new App\Controleurs\PostsControleur();
+      $ctrl->showAction($_GET['postId']);
+
+/*
 ROUTE PAR DEFAUT 
 PATTERN : /posts
 CTRL : PostsControleur

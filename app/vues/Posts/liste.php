@@ -18,10 +18,10 @@
       </a>
     </div>
     <div class="blog_details">
-      <a class="d-inline-block" href="single-blog.html">
+      <a class="d-inline-block" href="post/<?php echo $post->getId(); ?>/<?php echo \Noyau\Classes\Utils::slugification($post->getTitle()); ?>">
         <h2><?php echo $post->getTitle(); ?></h2>
       </a>
-      <p><?php echo $post->getContent(); ?></p>
+      <p><?php echo \Noyau\Classes\Utils::tronquage($post->getContent()); ?></p>
       <ul class="blog-info-link">
         <li><a href="#"><i class="fa fa-user"></i><?php echo $post->getCategorie(); ?></a></li>
       </ul>

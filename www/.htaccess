@@ -14,6 +14,11 @@ RewriteEngine on
 
 # ROUTES DES POSTS --------------------------------
 
+# DETAILS D'UN POST 
+# PATTERN: post/{id}/{slug}
+# URL : index.php
+RewriteRule ^post\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?postId=$1 [L]
+
 # ROUTE PAR DEFAUT
 # PATTERN: /posts
 # URL : index.php

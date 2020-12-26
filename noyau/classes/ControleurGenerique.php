@@ -17,6 +17,18 @@ abstract class ControleurGenerique {
       
    }
 
+
+   public function showAction($data, string $field = 'id') { 
+
+      $r = substr($this->_table, 0, -1); 
+      $methodName = 'findOneBy' . ucfirst($field);
+      $$r = $this->_gestionnaire->$methodName($data); 
+ 
+      include '../app/vues/' . $this->_table . '/show.php';
+
+    }
+
+
     public function indexAction(array $userData= []) {
       $defaultValue = [
          'view' => 'index',
@@ -27,13 +39,14 @@ abstract class ControleurGenerique {
       ];
 
       $data = array_merge($defaultValue ,$userData);
-
+      
       $r = $this->_table ;
 
       $$r = $this->_gestionnaire->findAll($data); 
    
       include '../app/vues/' . $this->_table . '/' . $data['view'] . '.php';
       }
+
    }
 
 
