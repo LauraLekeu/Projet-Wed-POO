@@ -8,7 +8,7 @@
 
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<base href="http://localhost:8888/Projet-Wed-POO/www/index.html" target="_top">
+<base href="<?php echo \Noyau\Classes\App::getRoot(); ?>" target="_top">
 <title>Wedding | Template <?php echo $title; ?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">

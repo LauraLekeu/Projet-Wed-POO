@@ -22,12 +22,16 @@
                    c.name AS categorie
             FROM posts p
             JOIN categories c ON p.categorie_id = c.id
-            ORDER BY p.created_at DESC
-             LIMIT 5;";
+            ORDER BY p.`{$data['orderByField']}` {$data['orderBySens']}
+            LIMIT :limit
+            OFFSET :offset;";
     $rs = App::getConnexion()->prepare($sql);
+    $rs->bindValue(':limit', $data['limit'], \PDO::PARAM_INT);
+    $rs->bindValue(':offset', $data['offset'], \PDO::PARAM_INT);
     $rs->execute();
     $tab = $rs->fetchAll(\PDO::FETCH_ASSOC);
     return $this->fromAssocToObject($tab, $this->_class);
   }
 
- }
+
+  }

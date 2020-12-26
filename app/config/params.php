@@ -14,3 +14,4 @@ define('USERPWD', 'root');
 // Zones dynamiques
 $content = "";
 $title   = "";
+$zoneScripts = "";
