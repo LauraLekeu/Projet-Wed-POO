@@ -12,7 +12,7 @@
   <article class="blog_item">
     <div class="blog_item_img">
       <img class="card-img rounded-0" src="assets/img/blog/<?php echo $post->getImage(); ?>" alt="">
-      <a href="#" class="blog_item_date">
+      <a href="post/<?php echo $post->getId(); ?>/<?php echo \Noyau\Classes\Utils::slugification($post->getTitle()); ?>" class="blog_item_date">
         <h3><?php echo $post->getCreated_at('d'); ?></h3>
         <p><?php echo $post->getCreated_at('M'); ?></p>
       </a>

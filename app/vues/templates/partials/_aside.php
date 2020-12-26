@@ -27,16 +27,15 @@
         // Liste des catégories
         $ctrl = new \App\Controleurs\CategoriesControleur();
         $ctrl->indexAction();  
-      ?>
+    ?>
   </aside>
 
   <aside class="single_sidebar_widget tag_cloud_widget">
-    <h4 class="widget_title">Tag Clouds</h4>
-    <ul class="list">
-      <li>
-        <a href="#">project</a>
-      </li>
-    </ul>
+  <?php  
+        // Liste des tags
+        $ctrl = new \App\Controleurs\TagsControleur();
+        $ctrl->indexAction();  
+  ?>
   </aside>
 
   <aside class="single_sidebar_widget newsletter_widget">
