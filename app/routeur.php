@@ -26,11 +26,23 @@ ACTION : INDEXACTION
 
 /* ROUTE STANDARDS  -------------------------------------------------------------------------------------------- */ 
 /*
+ROUTE DE LA NEWSLETTER
+PATTERN : /newsletter=add
+CTRL : newsltterControleur
+ACTION : INDEXACTION
+*/ 
+elseif(isset($_GET['newsletter'])):
+      $ctrl = new App\Controleurs\SubscribersControleur();
+      $ctrl->insertAction($_POST['email']);
+      
+      
+/*
 ROUTE DU DETAIL D'UN POST
 PATTERN : /?more-posts
 CTRL : PostsControleur
 ACTION : INDEXACTION
-*/ elseif(isset($_GET['postId'])):
+*/ 
+elseif(isset($_GET['postId'])):
       $ctrl = new App\Controleurs\PostsControleur();
       $ctrl->showAction($_GET['postId']);
 
@@ -40,12 +52,12 @@ PATTERN : /posts
 CTRL : PostsControleur
 ACTION : INDEXACTION
 */ 
-else:
-$ctrl = new App\Controleurs\PostsControleur();
-$ctrl->indexAction([
-      'limit'  => 5,
-      'orderByField' => 'created_at',
-      'orderBySens' => 'desc'
-   ]); 
+else:             
+      $ctrl = new App\Controleurs\PostsControleur();
+      $ctrl->indexAction([
+            'limit'  => 5,
+            'orderByField' => 'created_at',
+            'orderBySens' => 'desc'
+      ]); 
 
 endif;

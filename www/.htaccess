@@ -12,11 +12,18 @@ RewriteEngine on
 # ROUTES
 #--------------------------------------------------
 
+
+# ROUTE DE LA NEWSLETTER
+# PATTERN: newsletter/add
+# URL : index.php?newsletter=add
+RewriteRule ^newsletter\/add$ index.php?newsletter=add [L]
+
+
 # ROUTES DES POSTS --------------------------------
 
 # DETAILS D'UN POST 
 # PATTERN: post/{id}/{slug}
-# URL : index.php
+# URL : index.php?postId=$1
 RewriteRule ^post\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?postId=$1 [L]
 
 # ROUTE PAR DEFAUT

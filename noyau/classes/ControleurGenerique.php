@@ -48,6 +48,16 @@ abstract class ControleurGenerique {
       
       }
 
+      public function InsertAction($data, string $field = 'id') { 
+
+         $r = substr($this->_table, 0, -1); 
+         $methodName = 'insertOneBy' . ucfirst($field);
+         $$r = $this->_gestionnaire->$methodName($data); 
+         
+         header('location:' . \Noyau\Classes\App::getRoot());
+   
+       }
+
    }
 
 

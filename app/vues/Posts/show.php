@@ -26,7 +26,7 @@ use \Noyau\Classes\Template;
       <div class="blog_details">
          <h2><?php echo $post->getTitle(); ?></h2>
          <ul class="blog-info-link mt-3 mb-4">
-            <li><a href="#"><i class="fa fa-user"></i>?<?php echo $post->getCategorie(); ?></a></li>
+            <li><a href="#"><i class="fa fa-user"></i><?php echo $post->getCategorie(); ?></a></li>
          </ul>
          <p class="excert"><?php echo $post->getContent(); ?></p>
       </div>
