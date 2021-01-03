@@ -12,6 +12,8 @@ define('USERNAME', 'root');
 define('USERPWD', 'root');
 
 // Zones dynamiques
-$content = "";
-$title   = "";
-$zoneScripts = "";
+// $content = "";
+// $title   = "";
+// $zoneScripts = "";
+
+$zones = ['title', 'content', 'scripts'];

@@ -10,7 +10,7 @@ require_once '../vendor/autoload.php';
 require_once '../app/config/params.php';
 
 // Demarage de l'application
-\Noyau\Classes\App::start();
+\Noyau\Classes\App::start($zones);
 
 // Connexion
 \Noyau\Classes\App::getConnexion();

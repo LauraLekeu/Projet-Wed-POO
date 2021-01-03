@@ -39,4 +39,4 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
-<?php echo $zoneScripts ?>
+<?php echo \Noyau\Classes\Template::getZone('scripts'); ?>

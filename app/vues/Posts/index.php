@@ -5,18 +5,22 @@
       Liste des posts
 
  */
-?>
-
-<?php  
 
   use \Noyau\Classes\Template;
 
-  GLOBAL $zoneScripts;
-  $zoneScripts .= '<script src="assets/js/index.js"></script>';
-
-  Template::startZone(); 
-
 ?>
+
+<!-- Affectation de $title  -->
+<?php Template::startZone(); ?>
+<?php echo "Home"; ?>
+<?php Template::stopZone('title'); ?>
+
+<?php Template::startZone(); ?> 
+<script src="./assets/js/index.js"></script>
+<?php Template::stopZone('scripts'); ?>
+
+
+<?php  Template::startZone(); ?>
 
 <div class="blog_left_sidebar">
 

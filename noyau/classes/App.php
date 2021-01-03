@@ -40,11 +40,12 @@ abstract class App {
   }
 
   // AUTRES METHODES
-  public static function start() {
+  public static function start(array $zones) {
     if(SELF::$_start === false):
       session_start();
       SELF::setRoot();
       SELF::setConnexion();
+      Template::addZones($zones);
       SELF::$_start = true;
     endif;
   }

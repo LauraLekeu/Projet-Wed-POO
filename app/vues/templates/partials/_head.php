@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <base href="<?php echo \Noyau\Classes\App::getRoot(); ?>" target="_top">
-<title>Wedding | Template <?php echo $title; ?></title>
+<title>Wedding | <?php echo \Noyau\Classes\Template::getZone('title'); ?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="manifest" href="site.webmanifest">
